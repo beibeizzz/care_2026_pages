@@ -93,14 +93,14 @@ This data was collected from King’s College London/ St Thomas' Hospital with p
 The dataset has been divided into three main parts: training, validation, and test sets:
 
 *Task 1*:
-- **Training Set**: 60 LGE MRIs from Center A and 150 CTs from Center D
-- **Validation Set**: 10 LGE MRIs from Center A and 20 CTs from Center D
-- **Test Set**: 24 LGE MRIs from Center A and 130 CTs from Center D
+- **Training Set**: 60 LGE MRIs from Center A 
+- **Validation Set**: 10 LGE MRIs from Center A 
+- **Test Set**: 24 LGE MRIs from Center A 
   
 *Task 2*:
-- **Training Set**: 130 LGE MRIs from Centers A
-- **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C
-- **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B, and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
+- **Training Set**: 130 LGE MRIs from Centers A and 150 CTs from Center D
+- **Validation Set**: 10 LGE MRIs from Center A, 10 LGE MRIs from Center C and 20 CTs from Center D
+- **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B,  10 LGE MRIs from Center C, and 130 CTs from Center D  <!-- , 40 LGE MRIs from Center 2.2-->
 
 
 ### Data Format

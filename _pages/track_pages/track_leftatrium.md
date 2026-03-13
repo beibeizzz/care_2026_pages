@@ -60,7 +60,7 @@ Topics may cover (not exclusively):
 ## Data
 
 ### Data acquisition information
-We include 200+ multi-center LGE MRIs (enhanced.nii.gz) from different countries, with manual segmentation of LA cavity (atriumSegImgMO.nii.gz) and/ or scarring region (scarSegImgM.nii.gz).
+We include 200+ multi-center LGE MRIs and 300 CTs (enhanced.nii.gz) from different countries, with manual segmentation of LA cavity (atriumSegImgMO.nii.gz) and/ or scarring region (scarSegImgM.nii.gz).
 All these clinical data have got institutional ethic approval and have been anonymized (please follow the data usage agreement, i.e., CC BY NC ND).
 The details of these LGE MRI are listed below:
 
@@ -86,6 +86,7 @@ This data was original collected from Fuzhou University Affiliated Provincial Ho
 This data was collected from King’s College London/ St Thomas' Hospital with permission for release. All patients underwent CMR imaging on a 1.5T scanner (Magnetom Area, Siemens Healthineers, Erlangen, Germany) using a previously described protocol. Twenty minutes after contrast administration, late gadolinium enhancement imaging was performed using an ECG-triggered, respiratory navigated, 3D whole heart, inversion recovery spoiled gradient echo sequence in axial orientation (spatial resolution 1.3 mm × 1.3 mm × 4.0 mm reconstructed to 1.3 × 1.3 × 2 mm, TR 4 ms, TE 2 ms, flip angle 20°), phase encoding direction; anterior–posterior, frequency encoding direction; right–left, parallel imaging; GRAPPA factor 2.
 -->
 
+This data was original collected from Fuzhou University Affiliated Provincial Hospital. We selected part of the dataset from this challenge and refine their manual segmentation before release.The clinical CT images were acquired with Siemens Force. The data were acquired at a resolution various from (0.30 x 0.30 x 0.5) to (0.80 x 0.80 x 0.5) mm.
 
 
 ### Data split
@@ -98,24 +99,31 @@ The dataset has been divided into three main parts: training, validation, and te
 - **Test Set**: 24 LGE MRIs from Center A and 130 CTs from Center D
   
 *Task 2*:
-- **Training Set**: 130 LGE MRIs from Centers A
-- **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C
-- **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B, and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
+- **Training Set**: 130 LGE MRIs from Centers A 
+- **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C 
+- **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
+
+*Task 3*:
+- **Training Set**: 150 CTs from Center D
+- **Validation Set**: 20 CTs from Center D
+- **Test Set**: 130 CTs from Center D 
 
 ### Data Format
 Each LGE MRI, CT and gold standard label(s) of patients will be provided in the NIfTI format as follows:
 - enhanced.nii.gz (LGE MRI)s'ba
 - atriumSegImgMO.nii.gz (gold standard LA cavity label)
 - scarSegImgM.nii.gz (gold standard LA scar label, for task 1 only)
+- cardiacSegImgMO.nii.gz(gold standard labels of left atrium,pulmonary veins and left atrial appendage, for task 3 only)
 
 The submitted format of the prediction for the participants could be named as follows:
 - LA_predict.nii.gz (predicted LA cavity label)
+- cardiac_predict.nii.gz (predicted cardiac label)
 - scar_predict.nii.gz (predicted LA scar label)
 
 
 ## Metrics
 
-The performance of LA cavity segmentation or LA scar quantification results will be evaluated by：
+The performance of LA cavity segmentation, LA scar quantification and cardiac structure segmentation results will be evaluated by：
 
 **Task 1**:
 - **Generalized Dice Similarity Coefficient (G-DSC)** <d-cite key="lascarqs6">
@@ -127,6 +135,11 @@ The performance of LA cavity segmentation or LA scar quantification results will
 - **Average Surface Distance (ASD)**
 - **Hausdorff Distance (HD)**
 
+**Task 3**:S
+- **Dice Similarity Coefficient (DSC)**
+- **Average Surface Distance (ASD)**
+- **Hausdorff Distance (HD)**
+- **Jaccard similarity coefficient(Jaccard)**
 
 ## Rules
 1. External data sets and pre-trained models are NOT allowed in this track.

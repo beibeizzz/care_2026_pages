@@ -43,7 +43,7 @@ CARE-Left Atrium aims to address these issues, driving the advancement of DL mod
 ## Task
 
 {% include figure.liquid loading="eager" path="/assets/img/lascarqs2.png" class="img-fluid" zoomable=true caption="Figure 2." %}
-The target of this track is to automatically segment LA cavity and quantify LA scars from LGE MRI (see Fig. 2). The track will provide 200+ LGE MRIs and 300 CTs globally, i.e., from multiple imaging centers around the world, for developing novel algorithms that can quantify or segment LA cavity and scars. The track presents an open and fair platform for various research groups to test and validate their methods on these datasets acquired from the clinical environment. To ensure data privacy, the platform will enable remote training and testing on the dataset from different centers in local and the dataset can keep invisible.
+The target of this track is to automatically segment LA cavity and quantify LA scars from LGE MRI (see Fig. 2). The track will provide 500+ LGE MRIs and CTs globally, i.e., from multiple imaging centers around the world, for developing novel algorithms that can quantify or segment LA cavity and scars. The track presents an open and fair platform for various research groups to test and validate their methods on these datasets acquired from the clinical environment. To ensure data privacy, the platform will enable remote training and testing on the dataset from different centers in local and the dataset can keep invisible.
 
 The selected papers will be published in our proceedings (see [previous proceedings](https://www.google.co.uk/books/edition/Left_Atrial_and_Scar_Quantification_and/dkq9EAAAQBAJ?hl=en&gbpv=0)).
 
@@ -76,7 +76,15 @@ This data was original collected from Beth Israel Deaconess Medical Center and w
 
 This data was original collected from King’s College London and was used in [ISBI2012 Left Atrium Fibrosis and Scar Segmentation Challenge](https://www.cardiacatlas.org/challenges/left-atrium-fibrosis-and-scar-segmentation-challenge/). We selected part of the dataset from this challenge and refine their manual segmentation before release. The clinical images were also acquired with Philips Acheiva 1.5T using FB and navigator-gating with fat suppression. The spatial resolution of one 3D LGE MRI scan was 1.3 × 1.3 × 4.0 mm. The patient underwent an MR examination prior to ablation or was 3-6 months after ablation.
 
-Center D: 300 CTs
+*Center D*: 300 CTs
+
+This data was original collected from Fuzhou University Affiliated Provincial Hospital. We selected part of the dataset from this challenge and refine their manual segmentation before release.The clinical CT images were acquired with Siemens Force. The data were acquired at a resolution various from (0.30 x 0.30 x 0.5) to (0.80 x 0.80 x 0.5) mm.
+
+<!--
+*Center C-2*: 40 LGE MRIs
+
+This data was collected from King’s College London/ St Thomas' Hospital with permission for release. All patients underwent CMR imaging on a 1.5T scanner (Magnetom Area, Siemens Healthineers, Erlangen, Germany) using a previously described protocol. Twenty minutes after contrast administration, late gadolinium enhancement imaging was performed using an ECG-triggered, respiratory navigated, 3D whole heart, inversion recovery spoiled gradient echo sequence in axial orientation (spatial resolution 1.3 mm × 1.3 mm × 4.0 mm reconstructed to 1.3 × 1.3 × 2 mm, TR 4 ms, TE 2 ms, flip angle 20°), phase encoding direction; anterior–posterior, frequency encoding direction; right–left, parallel imaging; GRAPPA factor 2.
+-->
 
 This data was original collected from Fuzhou University Affiliated Provincial Hospital. We selected part of the dataset from this challenge and refine their manual segmentation before release.The clinical CT images were acquired with Siemens Force. The data were acquired at a resolution various from (0.30 x 0.30 x 0.5) to (0.80 x 0.80 x 0.5) mm.
 
@@ -86,9 +94,9 @@ This data was original collected from Fuzhou University Affiliated Provincial Ho
 The dataset has been divided into three main parts: training, validation, and test sets:
 
 *Task 1*:
-- **Training Set**: 60 LGE MRIs from Center A 
-- **Validation Set**: 10 LGE MRIs from Center A 
-- **Test Set**: 24 LGE MRIs from Center A 
+- **Training Set**: 60 LGE MRIs from Center A and 150 CTs from Center D
+- **Validation Set**: 10 LGE MRIs from Center A and 20 CTs from Center D
+- **Test Set**: 24 LGE MRIs from Center A and 130 CTs from Center D
   
 *Task 2*:
 - **Training Set**: 130 LGE MRIs from Centers A 
@@ -101,9 +109,8 @@ The dataset has been divided into three main parts: training, validation, and te
 - **Test Set**: 130 CTs from Center D 
 
 ### Data Format
-Each LGE MRI and gold standard label(s) of patients will be provided in the NIfTI format as follows:
-- enhanced.nii.gz (LGE MRI)
-- original.nii.gz (CT)
+Each LGE MRI, CT and gold standard label(s) of patients will be provided in the NIfTI format as follows:
+- enhanced.nii.gz (LGE MRI)s'ba
 - atriumSegImgMO.nii.gz (gold standard LA cavity label)
 - scarSegImgM.nii.gz (gold standard LA scar label, for task 1 only)
 - cardiacSegImgMO.nii.gz(gold standard labels of left atrium,pulmonary veins and left atrial appendage, for task 3 only)

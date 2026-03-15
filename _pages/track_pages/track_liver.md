@@ -37,16 +37,16 @@ Participants will develop robust AI solutions using multi-center, multi-phase MR
 
 ## Tasks
 ### **Task 1: Liver Fibrosis Staging (LiFS)**  
-Develop models to stage fibrosis into four stages (S1-S4). leveraging **cross-phase complementary information** from dynamic MRI sequences. Two clinically critical binary subtasks are evaluated:  
+Develop models to stage fibrosis into four stages (S1-S4), leveraging **cross-phase complementary information** from dynamic MRI sequences. Participants should submit one four-class probability vector (S1-S4) per case. The organisers will derive two clinically critical binary evaluations from this single output, so separate models for the two clinical tasks are not required:  
 1. **Cirrhosis Detection**: S1–S3 vs. S4  
 2. **Substantial Fibrosis Detection**: S1 vs. S2–S4  
 
 #### Subtasks:  
-- **Non-Contrast Subtask**: T1WI, T2WI, and DWI sequences only.  
-- **Contrast-Enhanced Subtask**: All modalities allowed, including Gd-EOB-DTPA phases (GED1–GED4).  
+- **Non-Contrast Subtask**: T1WI, T2WI, and DWI sequences only. Submissions that do not use any GED modality are evaluated in this subtask.  
+- **Contrast-Enhanced Subtask**: All modalities are allowed, including Gd-EOB-DTPA phases (GED1–GED4). Any method that uses at least one GED modality is evaluated in this subtask.  
 
 ### **Task 2: Liver Segmentation (LiSeg)**  
-Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepatobiliary phase (GED4) MRI** is available. Non-constrast data (T2WI, T1, DWI) could be segmented via **unsupervised or registration-based approaches** to overcome annotation limitations.  
+Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepatobiliary phase (GED4) MRI** is available. Non-contrast data (T2WI, T1, DWI) could be segmented via **unsupervised or registration-based approaches** to overcome annotation limitations. For evaluation, metrics are reported for submitted modalities only (for example, GED4-only submissions receive GED4 metrics only).  
 
 #### Subtasks:
 - **Non-Contrast Subtask**: Segment liver anatomy in **T2WI**, **T1**, and **DWI** sequences. No annotations provided.
@@ -183,6 +183,12 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=liver).
 
 ## Leaderboards
+For LiFS, participants submit four-class probabilities for fibrosis staging (S1-S4). The organisers will compute AUC and ACC for two derived binary clinical subtasks: S1–S3 vs. S4 and S1 vs. S2–S4. Methods that use any contrast-enhanced GED modality are evaluated under the contrast-enhanced subtask, while methods that use only non-contrast modalities are evaluated under the non-contrast subtask.
+
+For LiSeg, participants are required to segment the liver across multi-phase fibrosis MRI. We report Dice Similarity Score (DSC) and Hausdorff Distance (HD) only for the modalities included in each submission. If only GED4 is submitted, only GED4 metrics are reported; if additional modalities are submitted, their corresponding metrics are also reported.
+
+The evaluation metrics for each task are summarized in the table below. The leaderboard will rank all participating teams according to the key metrics of each subtask, including AUC and ACC for LiFS.
+
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;">
@@ -216,7 +222,7 @@ To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/
 </table>
 </div>
 
-- **NOTE: Participants are welcome to participate in a single subtask, and their performance will still be recorded and displayed on the leaderboard.**
+- **NOTE: Participants are welcome to participate in a single subtask, and their performance will still be recorded and displayed on the leaderboard. For LiSeg, scores are reported only for submitted modalities.**
 
 
 ## Citations

@@ -232,9 +232,9 @@ This track will give **2** best performance awards according to performances acr
 - **Ties are permitted when teams achieve identical scores.**
 
 
-We will rank participant methods based on the settings (​Lb1–Lb4) detailed in the following table:
+<!--We will rank participant methods based on the settings (​Lb1–Lb4) detailed in the following table:
 
-<!-- <div style="display: flex;">
+<div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
 <caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;width: 100%;"> Leaderboard (Lb) for CARE-Whole Heart track across modalities and evaluation settings.​​ Lb1–Lb4 represent performance from different test centers and modalities (e.g., Lb1 = CT segmentation peformance on center A and B). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
   <thead>

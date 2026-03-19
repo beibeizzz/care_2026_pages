@@ -30,10 +30,11 @@ After registration, we will assign participants an account to login into our eva
 
 **Contact**: If you have any questions, please feel free to contact: [care26challenge@163.com](mailto:care26challenge@163.com) or [care26challenge@outlook.com](mailto:care26challenge@outlook.com).
 
+<!--
 ## Post-Challenge Data Request
 
 For post-challenge data access requests, please contact [care26challenge@163.com](mailto:care26challenge@163.com). 
-
+-->
 
 
 ## Timeline

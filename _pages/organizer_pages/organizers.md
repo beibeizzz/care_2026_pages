@@ -64,4 +64,20 @@ profiles:
     image: fph-logo.png
     content: organizers/fph.md
     image_circular: false # crops the image to make it circular
+  - align: right
+    image: korea_cau-logo.png
+    content: organizers/korea_cau.md
+    image_circular: false # crops the image to make it circular
+  - align: right
+    image: kazakhstan_afknu-logo.png
+    content: organizers/kazakhstan_afknu.md
+    image_circular: false # crops the image to make it circular
+  - align: right
+    image: pakistan_itu-logo.png
+    content: organizers/pakistan_itu.md
+    image_circular: false # crops the image to make it circular
+  - align: right
+    image: pakistan_lums-logo.png
+    content: organizers/pakistan_lums.md
+    image_circular: false # crops the image to make it circular
 ---

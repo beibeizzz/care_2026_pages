@@ -14,7 +14,6 @@ toc:
   - name: Award Policy
   - name: Leaderboards
   - name: Citations
-  - name: Contact
 _styles: >
   d-article {
     contain: layout style;
@@ -152,9 +151,15 @@ C and D mr_train
 </div>
 
 ```
-|-- CaseVal001_image.nii.gz
-|-- CaseVal002_image.nii.gz
-|-- CaseVal003_image.nii.gz
+ct_val
+|-- CaseCTVal001_image.nii.gz
+|-- CaseCTVal002_image.nii.gz
+|-- CaseCTVal003_image.nii.gz
+|-- ...
+mr_val
+|-- CaseMRVal001_image.nii.gz
+|-- CaseMRVal002_image.nii.gz
+|-- CaseMRVal003_image.nii.gz
 |-- ...
 ```
 
@@ -200,13 +205,19 @@ C and D mr_train
 </div>
 
 ```
-|-- CaseTest001_image.nii.gz
-|-- CaseTest002_image.nii.gz
-|-- CaseTest003_image.nii.gz
+ct_test
+|-- CaseCTTest001_image.nii.gz
+|-- CaseCTTest002_image.nii.gz
+|-- CaseCTTest003_image.nii.gz
+|-- ...
+mr_test
+|-- CaseMRTest001_image.nii.gz
+|-- CaseMRTest002_image.nii.gz
+|-- CaseMRTest003_image.nii.gz
 |-- ...
 ```
 
-**Note on Validation and Test datasets**: We have randomly shuffled the data from different centers and anonymized the center information to enhance fairness.
+**Note on Validation and Test datasets**: We have randomly shuffled the data from different centers and anonymized the center information to promote fairness.
 
 ## Rules
 - **Only automatic methods are acceptable.** In this track, participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
@@ -302,8 +313,12 @@ Leaderboards will be released after test results submission.
 <script defer src="{{ '/assets/js/leaderboard_sort.js' | relative_url }}"></script>
 
 
-## Contact
+<!--## Contact
 If you have any questions regarding the CARE-Whole Heart track, please feel free to contact:
 
+- [care26challenge@163.com](mailto:care26challenge@163.com)
+- [care26challenge@outlook.com](mailto:care26challenge@outlook.com)
+
+
 Prof Xiahai Zhuang: [zxh@fudan.edu.cn](mailto:zxh@fudan.edu.cn)
-Hangqi Zhou: [hqzhou21@m.fudan.edu.cn](mailto:hqzhou21@m.fudan.edu.cn)
+Hangqi Zhou: [hqzhou21@m.fudan.edu.cn](mailto:hqzhou21@m.fudan.edu.cn)-->
